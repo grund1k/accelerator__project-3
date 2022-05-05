@@ -1,0 +1,64 @@
+.subscription-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.subscription-list__item {
+  max-width: 360px;
+  background-color: $color-default-white;
+  padding: 68px 77px;
+  text-align: center;
+}
+
+.subscription-list__item h3 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 29px;
+  color: $color-sapphire;
+  margin: 0 0 20px;
+}
+
+.subscription-list__item p {
+  font-size: 16px;
+  line-height: 150%;
+  color: $color-chambray;
+  margin: 0 0 96px 0;
+}
+
+.subscription-list__price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  position: relative;
+  margin: 0 0 59px;
+
+  &::before {
+    content: attr(data-content);
+
+    position: absolute;
+    top: -54px;
+    left: -19px;
+
+    width: 100%;
+    height: 100%;
+
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 150px;
+    color: rgba($color-whisper, 0.48);
+  }
+}
+
+.subscription-list__price span {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 150%;
+  color: $color-egyptian-blue;
+  z-index: 1;
+}
+
+.subscription-list__price svg {
+  z-index: 1;
+}

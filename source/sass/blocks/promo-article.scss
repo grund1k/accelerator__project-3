@@ -1,0 +1,34 @@
+.promo-article {
+  max-width: 560px;
+  min-height: 211px;
+  border: 7px solid;
+  border-image-source: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
+  border-image-slice: 1;
+  padding: 35px;
+}
+
+.promo-article h3 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 150%;
+  color: $color-resolution-blue;
+  margin: 0 0 20px;
+}
+
+.promo-article p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: $color-resolution-blue;
+  margin: 0;
+}
+
+.promo-article a {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-resolution-blue;
+  text-decoration: underline;
+}
