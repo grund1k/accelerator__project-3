@@ -30,6 +30,10 @@
     &:focus {
       opacity: 0.8;
     }
+
+    &:active {
+      text-decoration: underline;
+    }
   }
 
   &--sapphire-border {

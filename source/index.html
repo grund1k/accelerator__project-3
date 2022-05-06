@@ -16,11 +16,48 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="header">
+        <div class="container">
+          <div class="header__top-wrapper">
+            <div class="logo">
+              <svg width="89" height="20">
+                <use xlink:href="img/sprite_auto.svg#logo"></use>
+              </svg>
+            </div>
+            <a href="tel:+78005555555">8-800-555-55-55</a>
+          </div>
+          <div class="header__body-wrapper">
+            <div class="header__text-wrapper">
+              <p>Омск</p>
+              <h2>Фитнес<br>центр</h2>
+              <ul>
+                <li>Тренажёрный зал</li>
+                <li>Групповые занятия</li>
+                <li>Кардио-зона</li>
+              </ul>
+              <a class="header__btn btn" href="#subscription">Купить абонемент</a>
+            </div>
+            <picture>
+              <source srcset="img/main-screen.webp 1x, img/main-screen@2x.webp 2x" type="image/webp">
+              <!-- 1x: 500px; 2x: 1000px; -->
+              <img src="img/main-screen.jpg" srcset="img/main-screen@2x.jpg 2x" alt="Изображение мужчины в образе супермена" width="500" height="556">
+            </picture>
+            <ul class="header__social-list social-list">
+              <li class="social-list__item">
+                <a href="#">FB</a>
+              </li>
+              <li class="social-list__item">
+                <a href="#">VK</a>
+              </li>
+              <li class="social-list__item">
+                <a href="#">IG</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </header>
       <main>
-        <section class="subscription">
+        <section class="subscription" id="subscription">
           <ul class="subscription-list">
             <li class="subscription-list__item">
               <h3>С тренером</h3>

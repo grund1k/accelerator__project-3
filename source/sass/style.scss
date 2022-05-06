@@ -17,6 +17,10 @@
 
 // Blocks
 // ---------------------------------
+@import "blocks/btn";
+@import "blocks/header";
+@import "blocks/logo";
+@import "blocks/social-list";
 @import "blocks/subscription";
 @import "blocks/subscription-list";
 @import "blocks/trainers-list";
@@ -25,7 +29,6 @@
 @import "blocks/features-list";
 @import "blocks/articles-list";
 @import "blocks/promo-article";
-@import "blocks/btn";
 @import "blocks/modal";
 
 // ---------------------------------
