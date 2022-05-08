@@ -17,6 +17,7 @@
   <body>
     <div class="wrapper">
       <header class="header">
+        <h1 class="visually-hidden">Фитнес-цент Supergym</h1>
         <div class="container">
           <div class="header__top-wrapper">
             <div class="logo">
@@ -57,6 +58,42 @@
         </div>
       </header>
       <main>
+        <section class="description">
+          <div class="description__wrapper">
+            <div class="description__text-wrapper">
+              <div class="description__title-area">
+                <h2>Тренажерный зал</h2>
+                <p>Просторный зал площадью 900&nbsp;кв/м</p>
+              </div>
+              <div class="description__text">
+                <p>Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
+                <p>В&nbsp;зале расположены отдельная зона для Crossfit и кардио-зона с&nbsp;40&nbsp;тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
+              </div>
+            </div>
+            <div class="decrtiption__media-wrapper">
+              <div class="description__image-wrapper">
+                <picture>
+                  <source srcset="img/gym.webp 1x, img/gym@2x.webp 2x" type="image/webp">
+                  <!-- 1x: 778px; 2x: 1556px; -->
+                  <img src="img/gym.jpg" srcset="img/gym@2x.jpg 2x" alt="Фотография тренажерного зала с гантелями, блочными тренажерами и кардио зоной" width="660" height="401">
+                </picture>
+              </div>
+              <div class="description__video-container description__video-container--active">
+                <iframe class="description__video" width="364" height="228" src="https://www.youtube.com/embed/9TZXsZItgdw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="description__video-overlay">
+                  <picture>
+                    <source srcset="img/video.webp 1x, img/video@2x.webp 2x" type="image/webp">
+                    <!-- 1x: 395px; 2x: 790px; -->
+                    <img src="img/video.jpg" srcset="img/video@2x.jpg 2x" alt="Обложка видео. На фотграфии изображен зал с тренажерами" width="364" height="228">
+                  </picture>
+                  <button class="description__video-play-button">
+                    <span class="visually-hidden">Включить видео</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="subscription" id="subscription">
           <ul class="subscription-list">
             <li class="subscription-list__item">
