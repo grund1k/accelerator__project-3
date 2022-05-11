@@ -1,0 +1,67 @@
+.tabs__navigation-list {
+  list-style: none;
+  margin: 0 auto 52px auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 47px;
+  position: relative;
+  width: fit-content;
+
+  &::after {
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+    width: 100%;
+    bottom: -14px;
+  }
+
+  @include vp-1199 {
+    gap: 55px;
+    margin-bottom: 58px;
+  }
+
+  @include vp-767 {
+    gap: 46px;
+    margin-bottom: 48px;
+  }
+}
+
+.tabs__navigation-button {
+  display: block;
+  font-family: $ff-placeholder;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  border: none;
+  background-color: transparent;
+  color: rgba($color-sapphire, 0.5);
+  padding: 0;
+  position: relative;
+
+  &.is-active {
+    color: $color-sapphire;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      border-bottom: 2px solid #D10A42;
+      bottom: -14px;
+    }
+  }
+
+  @include vp-1199 {
+    font-size: 18px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+
+    &.is-active {
+      &::before {
+        width: 110%;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.no-js {
+  display: block;
+  position: relative;
+  visibility: visible;
+  opacity: 1;
+  overflow: auto;
+}
+
+.no-js.tabs__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+.subscription-list.no-js {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  @include vp-1199 {
+    grid-template-rows: 1fr;
+    justify-items: center;
+  }
+}
