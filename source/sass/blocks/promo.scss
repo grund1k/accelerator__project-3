@@ -1,0 +1,170 @@
+.promo {
+  padding-top: 45px;
+
+  @include vp-767 {
+    padding-top: 71px;
+  }
+}
+
+.promo__wrapper {
+  color: $color-default-white;
+  display: flex;
+  justify-content: center;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.promo__text-wrapper {
+  width: 100%;
+  max-width: 500px;
+  background-color: $color-torch-red;
+  padding: 78px 75px 20px 77px;
+
+  @include vp-1199 {
+    max-width: 292px;
+    padding: 46px 43px 19px 42px;
+  }
+
+  @include vp-767 {
+    max-width: unset;
+    min-height: 292px;
+  }
+}
+
+.promo__main-info {
+  display: flex;
+  margin-bottom: 10px;
+  margin-left: 3px;
+
+  @include vp-1199 {
+    margin-bottom: 0;
+  }
+}
+
+.promo__text-wrapper h2 {
+  font-family: $ff-bebas;
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 90px;
+  letter-spacing: 0.03em;
+  margin: 0 49px 0 0;
+
+  @include vp-1199 {
+    font-size: 52px;
+    line-height: 52px;
+    margin: 0 30px 0 0;
+  }
+}
+
+.promo__text-wrapper p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  margin: 0 0 45px 3px;
+
+  @include vp-1199 {
+    font-size: 12px;
+    margin: 0 0 28px 3px;
+  }
+}
+
+.promo__shedule {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @include vp-1199 {
+    gap: 0;
+  }
+}
+
+.pormo__date-wrapper p,
+.promo__time-wrapper p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  margin: 0;
+
+  @include vp-1199 {
+    font-size: 12px;
+    margin: 0;
+  }
+}
+
+.promo__date p,
+.promo__time p {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 150%;
+  margin: 0;
+
+  @include vp-1199 {
+    font-size: 24px;
+  }
+}
+
+.promo__month-and-year p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  margin: 0;
+
+  @include vp-1199 {
+    font-size: 10px;
+  }
+}
+
+.promo__date {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  @include vp-1199 {
+    gap: 4px;
+  }
+}
+
+.promo__btn {
+  min-height: 71px;
+
+  @include vp-1199 {
+    min-height: 42px;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.05em;
+    border: 2px solid $color-default-white;
+  }
+}
+
+.promo__image {
+  @media (max-width: 330px) {
+    position: relative;
+    overflow: hidden;
+    max-height: 292px;
+  }
+}
+
+.promo__image img {
+  max-width: 660px;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+
+  @include vp-1199 {
+    max-width: 386px;
+    height: 292px;
+  }
+
+  @include vp-767 {
+    max-width: unset;
+  }
+
+  @media (max-width: 330px) {
+    position: relative;
+    height: auto;
+    width: 150%;
+    left: -69px;
+  }
+}

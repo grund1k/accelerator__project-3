@@ -698,6 +698,10 @@ button,
   min-height: 64px;
 }
 
+.btn--min-height71 {
+  min-height: 71px;
+}
+
 .header {
   padding-top: 29px;
   padding-bottom: 50px;
@@ -1141,6 +1145,107 @@ button,
   background: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
   border: none;
   color: #ffffff;
+}
+
+.promo {
+  padding-top: 45px;
+}
+
+.promo__wrapper {
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.promo__text-wrapper {
+  width: 100%;
+  max-width: 500px;
+  background-color: #ed0233;
+  padding: 78px 75px 20px 77px;
+}
+
+.promo__main-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+  margin-left: 3px;
+}
+
+.promo__text-wrapper h2 {
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 90px;
+  letter-spacing: 0.03em;
+  margin: 0 49px 0 0;
+}
+
+.promo__text-wrapper p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  margin: 0 0 45px 3px;
+}
+
+.promo__shedule {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pormo__date-wrapper p,
+.promo__time-wrapper p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  margin: 0;
+}
+
+.promo__date p,
+.promo__time p {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 150%;
+  margin: 0;
+}
+
+.promo__month-and-year p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  margin: 0;
+}
+
+.promo__date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.promo__btn {
+  min-height: 71px;
+}
+
+.promo__image img {
+  max-width: 660px;
+  width: 100%;
+  height: 500px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .trainers-list {
@@ -1687,6 +1792,62 @@ button,
     min-width: 442px;
   }
 
+  .promo__text-wrapper {
+    max-width: 292px;
+    padding: 46px 43px 19px 42px;
+  }
+
+  .promo__main-info {
+    margin-bottom: 0;
+  }
+
+  .promo__text-wrapper h2 {
+    font-size: 52px;
+    line-height: 52px;
+    margin: 0 30px 0 0;
+  }
+
+  .promo__text-wrapper p {
+    font-size: 12px;
+    margin: 0 0 28px 3px;
+  }
+
+  .promo__shedule {
+    gap: 0;
+  }
+
+  .pormo__date-wrapper p,
+  .promo__time-wrapper p {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .promo__date p,
+  .promo__time p {
+    font-size: 24px;
+  }
+
+  .promo__month-and-year p {
+    font-size: 10px;
+  }
+
+  .promo__date {
+    gap: 4px;
+  }
+
+  .promo__btn {
+    min-height: 42px;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.05em;
+    border: 2px solid #ffffff;
+  }
+
+  .promo__image img {
+    max-width: 386px;
+    height: 292px;
+  }
+
   .no-js.tabs__content {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -1889,6 +2050,26 @@ button,
     height: 33px;
   }
 
+  .promo {
+    padding-top: 71px;
+  }
+
+  .promo__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .promo__text-wrapper {
+    max-width: unset;
+    min-height: 292px;
+  }
+
+  .promo__image img {
+    max-width: unset;
+  }
+
   .modal__wrapper {
     padding: 60px 16px;
   }
@@ -1900,6 +2081,21 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+}
+
+@media (max-width: 330px) {
+  .promo__image {
+    position: relative;
+    overflow: hidden;
+    max-height: 292px;
+  }
+
+  .promo__image img {
+    position: relative;
+    height: auto;
+    width: 150%;
+    left: -69px;
   }
 }
 
