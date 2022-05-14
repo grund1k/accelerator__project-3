@@ -1,0 +1,100 @@
+.trainers {
+  padding-top: 57px;
+  padding-bottom: 120px;
+
+  @include vp-1199 {
+    padding-top: 38px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 9px;
+    padding-bottom: 71px;
+  }
+}
+
+.trainers h2 {
+  font-family: $ff-bebas;
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  color: $color-sapphire;
+  margin: 0 0 56px 3px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 42px;
+    text-align: center;
+    margin: 0 0 45px 0;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.trainers__wrapper {
+  position: relative;
+}
+
+.trainers__button {
+  cursor: pointer;
+  width: 16px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+
+  &--next {
+    background-image: url("../img/svg/slider-right.svg");
+    right: -1.3%;
+    top: 59%;
+  }
+
+  &--prev {
+    background-image: url("../img/svg/slider-left.svg");
+    left: -1.3%;
+    top: 59%;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  @include vp-1199 {
+    &--next {
+      right: 5.7%;
+      top: 57%;
+    }
+
+    &--prev {
+      left: 5.7%;
+      top: 57%;
+    }
+  }
+
+  @include vp-767 {
+    width: 10px;
+    height: 19px;
+
+    &--next {
+      right: 4.7%;
+      top: 59%;
+    }
+
+    &--prev {
+      left: 4.7%;
+      top: 59%;
+    }
+  }
+}

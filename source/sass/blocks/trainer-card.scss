@@ -11,6 +11,15 @@
   &:hover .trainer-card__title-wrapper{
     display: none;
   }
+
+  @include vp-1199 {
+    max-width: 268px;
+  }
+
+  @include vp-767 {
+    max-width: 226px;
+    max-height: 274px;
+  }
 }
 
 .trainer-card h3 {
@@ -25,30 +34,61 @@
 }
 
 .trainer-card__wrapper img {
+  max-width: 260px;
   width: 100%;
-  height: auto;
+  min-height: 294px;
+  object-fit: cover;
+
+  @include vp-1199 {
+    max-width: 268px;
+  }
+
+  @include vp-767 {
+    max-width: 226px;
+    min-height: 274px;
+  }
+}
+
+.trainer-card__title-wrapper {
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 20px;
+
+  @include vp-1199 {
+    bottom: 28px;
+  }
 }
 
 .trainer-card__title-wrapper h3 {
   margin: 0;
-  position: absolute;
-  bottom: 30px;
-  left: 25%;
 }
 
 .trainer-card__info {
   display: none;
+  width: 100%;
   max-width: 260px;
+  height: 100%;
   max-height: 294px;
   background: rgba($color-sapphire, 0.89);
   text-align: center;
-  padding: 58px 57px;
+  padding: 52px 27px 20px 27px;
+  overflow: auto;
   position: absolute;
   top: 0;
+
+  @include vp-1199 {
+    max-width: 268px;
+  }
+
+  @include vp-767 {
+    padding: 43px 27px 20px;
+  }
 }
 
 .trainer-card__info h3 {
-  margin: 0 0 10px;
+  margin: 0 0 -3px;
 }
 
 .trainer-card__info p {
@@ -56,7 +96,7 @@
   font-size: 16px;
   line-height: 150%;
   color: $color-spindel;
-  margin: 0 0 45px;
+  margin: 0 0 31px;
 }
 
 .trainer-card__info ul {
@@ -64,9 +104,18 @@
   font-size: 14px;
   line-height: 150%;
   color: $color-default-white;
-
-  margin: 0;
+  margin: 0 0 0 42px;
   padding: 0;
   text-align: start;
-  list-style-type: disc;
+  list-style-image: url("../img/svg/list-circle.svg");
+
+  @include vp-767 {
+    margin: 0 0 0 22px;
+  }
+}
+
+.trainer-card__info li {
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
 }

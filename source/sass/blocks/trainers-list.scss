@@ -1,5 +1,10 @@
 .trainers-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include vp-1199 {
+    max-width: 564px;
+    margin: 0 auto;
+  }
+
+  @include vp-767 {
+    max-width: 226px;
+  }
 }

@@ -6,6 +6,10 @@
   overflow: auto;
 }
 
+.no-js.description__video-container {
+  display: none;
+}
+
 .no-js.tabs__content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -26,4 +30,24 @@
     grid-template-rows: 1fr;
     justify-items: center;
   }
+}
+
+.no-js.trainers-list {
+  max-width: unset;
+  overflow: unset;
+}
+
+.no-js.trainers-list__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  overflow: unset;
+
+  @include vp-1199 {
+    justify-content: center;
+  }
+}
+
+.no-js.trainers__button {
+  display: none;
 }
