@@ -1,0 +1,32 @@
+.sales {
+  padding-top: 128px;
+  padding-bottom: 100px;
+
+  @include vp-1199 {
+    padding-top: 102px;
+  }
+
+  @include vp-767 {
+    padding-top: 70px;
+  }
+}
+
+.sales h2 {
+  font-family: $ff-bebas;
+  font-weight: 700;
+  font-size: 49px;
+  letter-spacing: 0.03em;
+  color: $color-sapphire;
+  text-align: center;
+  margin: 0 0 67px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    margin: 0 0 54px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    margin: 0 0 50px;
+  }
+}

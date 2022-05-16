@@ -4,7 +4,98 @@
   border: 7px solid;
   border-image-source: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
   border-image-slice: 1;
-  padding: 35px;
+  padding: 18px 10px 30px 29px;
+  display: flex;
+  flex-direction: column;
+
+  &--year-promo {
+    border: none;
+    height: 100%;
+    min-height: 462px;
+    padding: 0;
+    flex-direction: row;
+  }
+
+  @include vp-1199 {
+    &--year-promo {
+      max-width: unset;
+    }
+
+    &--second {
+      padding-right: 66px;
+    }
+  }
+
+  @include vp-767 {
+    max-width: unset;
+    text-align: center;
+    padding: 28px 29px 41px 29px;
+
+    &--year-promo {
+      flex-direction: column;
+      padding: 0;
+    }
+  }
+}
+
+.promo-article__sales-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  background-color: $color-torch-red;
+  padding: 37px 36px 46px 45px;
+
+  @include vp-1199 {
+    min-width: 280px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    max-height: 299px;
+    text-align: center;
+    padding: 35px 36px 46px 35px;
+  }
+}
+
+.promo-article__image-wrapper {
+  position: relative;
+  overflow: hidden;
+  max-width: 280px;
+  max-height: 462px;
+
+  @include vp-1199 {
+    width: 100%;
+    max-width: unset;
+  }
+
+  @include vp-767 {
+    max-height: 329px;
+  }
+}
+
+.promo-article__image-wrapper img {
+  min-height: 462px;
+  width: 158%;
+  max-width: unset;
+  object-fit: cover;
+  position: relative;
+  top: -40%;
+  left: -38px;
+
+  @include vp-1199 {
+    width: 121%;
+    top: -44%;
+    left: -9px;
+  }
+
+  @include vp-767 {
+    top: -95%;
+  }
+
+  @media (max-width: 530px) {
+    top: -52%;
+  }
 }
 
 .promo-article h3 {
@@ -12,7 +103,7 @@
   font-size: 26px;
   line-height: 150%;
   color: $color-resolution-blue;
-  margin: 0 0 20px;
+  margin: 0 0 4px;
 }
 
 .promo-article p {
@@ -31,4 +122,45 @@
   text-transform: uppercase;
   color: $color-resolution-blue;
   text-decoration: underline;
+  margin-top: auto;
+}
+
+.promo-article__sales-text-wrapper a {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-default-white;
+  margin-top: auto;
+}
+
+.promo-article__sales-text-wrapper p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: $color-default-white;
+}
+
+.promo-article__year-subscription-text {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 44px;
+
+  @include vp-767 {
+    margin-bottom: 40px;
+  }
+}
+
+.promo-article__year-subscription-text p {
+  font-weight: 700;
+  font-size: 28px;
+  color: $color-default-white;
+  margin: 0 0 18px;
+}
+
+.promo-article__year-subscription-text span {
+  font-weight: 700;
+  font-size: 70px;
+  color: $color-default-white;
 }
