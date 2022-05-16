@@ -1757,7 +1757,7 @@ button,
 
 .sales {
   padding-top: 128px;
-  padding-bottom: 100px;
+  padding-bottom: 57px;
 }
 
 .sales h2 {
@@ -1920,13 +1920,36 @@ button,
   color: #ffffff;
 }
 
-.modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
+.reviews {
+  padding-top: 58px;
+}
+
+.reviews h2 {
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  color: #102654;
+  text-align: center;
+  margin: 0 0 55px 0;
+}
+
+.reviews__wrapper {
+  max-width: 672px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+}
+
+.reviews__list {
+  width: 100%;
+  max-width: 560px;
+}
+
+.reviews__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1934,102 +1957,60 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  background-color: rgba(0, 0, 0, 0.8);
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  -o-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  pointer-events: none;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.modal::-webkit-scrollbar {
-  display: none;
-}
-
-.modal__wrapper {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   width: 100%;
-  min-height: 100%;
-  padding: 60px 40px;
+  min-height: 242px;
+  -webkit-box-shadow: 0px 0px 40px rgba(28, 51, 116, 0.2);
+  box-shadow: 0px 0px 40px rgba(28, 51, 116, 0.2);
+  background-color: #1c3374;
+  padding: 55px 62px 20px 169px;
 }
 
-.modal__overlay {
+.reviews__item h3 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  color: #ffffff;
+  margin: 0 0 11px 0;
+}
+
+.reviews__item p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #ffffff;
+  margin: 0;
+}
+
+.reviews__item p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.reviews__image-wrapper img {
+  border-radius: 50%;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
+  left: 62px;
+  top: 61px;
 }
 
-.modal__content {
-  position: relative;
-  width: 600px;
-  padding: 40px;
-  background-color: #ffffff;
+.reviews__btn {
+  width: 16px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
-.modal__close-btn {
-  position: absolute;
-  top: 22px;
-  right: 22px;
-  z-index: 1;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  background: rgba(255, 255, 255, 0);
-  border: none;
-  cursor: pointer;
+.reviews__btn--next {
+  background-image: url("../img/svg/slider-right.svg");
 }
 
-.modal--responsive .modal__content {
-  width: 100%;
-}
-
-.modal--fit-content .modal__content {
-  width: auto;
-}
-
-.modal--no-scale {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.modal--preload {
-  -webkit-transition: none;
-  -o-transition: none;
-  transition: none;
-}
-
-.modal.is-active {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
+.reviews__btn--prev {
+  background-image: url("../img/svg/slider-left.svg");
+  -webkit-box-ordinal-group: 0;
+  -ms-flex-order: -1;
+  order: -1;
 }
 
 [data-tabs="parent"] {
@@ -2496,6 +2477,7 @@ button,
 
   .sales {
     padding-top: 102px;
+    padding-bottom: 48px;
   }
 
   .sales h2 {
@@ -2540,6 +2522,33 @@ button,
     width: 121%;
     top: -44%;
     left: -9px;
+  }
+
+  .reviews {
+    padding-top: 47px;
+  }
+
+  .reviews h2 {
+    font-size: 42px;
+    line-height: 42px;
+    margin: 0 0 45px 0;
+  }
+
+  .reviews__wrapper {
+    max-width: 678px;
+  }
+
+  .reviews__list {
+    max-width: 566px;
+  }
+
+  .reviews__item {
+    padding: 55px 62px 20px 173px;
+  }
+
+  .reviews__image-wrapper img {
+    left: 65px;
+    top: 62px;
   }
 
   .no-js.tabs__content {
@@ -2909,6 +2918,7 @@ button,
 
   .sales {
     padding-top: 70px;
+    padding-bottom: 33px;
   }
 
   .sales h2 {
@@ -2963,17 +2973,52 @@ button,
     margin-bottom: 40px;
   }
 
-  .modal__wrapper {
-    padding: 60px 16px;
+  .reviews {
+    padding-top: 33px;
   }
 
-  .modal__content {
-    width: 100%;
-    padding: 20px;
+  .reviews h2 {
+    font-size: 32px;
+    line-height: 32px;
   }
 
-  .modal--fit-content .modal__content {
-    width: 100%;
+  .reviews__wrapper {
+    gap: 23px;
+    padding: 0 16px;
+  }
+
+  .reviews__item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 41px 26px 34px 25px;
+  }
+
+  .reviews__item h3 {
+    margin: 4px 0 19px 0;
+    max-width: 62px;
+  }
+
+  .reviews__item p {
+    text-align: center;
+  }
+
+  .reviews__image-wrapper img {
+    width: 68px;
+    height: 68px;
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-right: 15px;
+    margin-left: 17px;
+  }
+
+  .reviews__btn {
+    width: 10px;
+    height: 19px;
   }
 }
 

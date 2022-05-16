@@ -1,7 +1,7 @@
 // Swiper 7.4.1
 import './vendor/swiper';
 
-const swiper = new Swiper('.trainers-list', {
+const slider = new Swiper('.trainers-list', {
   slidesPerView: 4,
   spaceBetween: 41,
   slidesPerGroup: 4,
@@ -27,5 +27,16 @@ const swiper = new Swiper('.trainers-list', {
       spaceBetween: 41,
       slidesPerGroup: 4,
     },
+  },
+});
+
+const carousel = new Swiper('.reviews__list', {
+  slidesPerView: 1,
+  spaceBetween: 40,
+  slidesPerGroup: 1,
+  loop: true,
+  navigation: {
+    nextEl: '.reviews__btn--next',
+    prevEl: '.reviews__btn--prev',
   },
 });

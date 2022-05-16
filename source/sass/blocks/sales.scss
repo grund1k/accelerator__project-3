@@ -1,13 +1,15 @@
 .sales {
   padding-top: 128px;
-  padding-bottom: 100px;
+  padding-bottom: 57px;
 
   @include vp-1199 {
     padding-top: 102px;
+    padding-bottom: 48px;
   }
 
   @include vp-767 {
     padding-top: 70px;
+    padding-bottom: 33px;
   }
 }
 
