@@ -1,0 +1,27 @@
+.contacts-info {
+  display: flex;
+  justify-content: center;
+
+  @include vp-1199 {
+    flex-direction: column;
+  }
+}
+
+.contacts-info h2 {
+  font-family: $ff-bebas;
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 64px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}

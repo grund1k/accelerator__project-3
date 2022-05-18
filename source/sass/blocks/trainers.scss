@@ -71,6 +71,16 @@
     cursor: default;
   }
 
+  @media (max-width: 1298px) {
+    &--next {
+      right: 0.5%;
+    }
+
+    &--prev {
+      left: 0.5%;
+    }
+  }
+
   @include vp-1199 {
     &--next {
       right: 5.7%;

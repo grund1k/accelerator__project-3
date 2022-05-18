@@ -4,11 +4,62 @@
   font-size: 12px;
   line-height: 14px;
   text-align: right;
+
+  &--footer {
+    list-style: none;
+    margin: -9px 0 0 0;
+    padding: 0;
+    text-align: start;
+    display: flex;
+    align-items: center;
+  }
+
+  @include vp-767 {
+    margin-top: 0;
+  }
 }
 
 .social-list__item {
   &:not(:last-child) {
     margin-bottom: 19px;
+  }
+
+  &--footer {
+    &:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 26px
+    }
+  }
+
+  @include vp-1199 {
+    &--footer {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  @include vp-767 {
+    &--footer {
+      &:not(:last-child) {
+        margin-right: 36px;
+      }
+    }
+
+    &--vk svg {
+      width: 32px;
+      height: 17px;
+    }
+
+    &--inst {
+      width: 27px;
+      height: 27px;
+    }
+
+    &--fb {
+      width: 14px;
+      height: 27px;
+    }
   }
 }
 
