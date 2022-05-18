@@ -2063,7 +2063,7 @@ button,
 
 .form h2 {
   color: #ffffff;
-  margin: 0 0 13px;
+  margin: 0 0 38px;
 }
 
 .form__wrapper {
@@ -2420,6 +2420,7 @@ button,
 
   .header__text-wrapper ul {
     top: 134px;
+    right: 65%;
   }
 
   .header__btn {
@@ -2963,7 +2964,7 @@ button,
 
   .header__text-wrapper ul {
     top: 121px;
-    right: 60%;
+    right: 61%;
   }
 
   .header__btn {
