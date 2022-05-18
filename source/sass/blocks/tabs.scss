@@ -9,7 +9,7 @@
   width: fit-content;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     border-bottom: 2px solid rgba(120, 120, 120, 0.2);
     width: 100%;
@@ -46,7 +46,7 @@
       content: "";
       position: absolute;
       width: 100%;
-      border-bottom: 2px solid #D10A42;
+      border-bottom: 2px solid #d10a42;
       bottom: -14px;
     }
   }

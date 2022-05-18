@@ -1,24 +1,24 @@
 .subscription {
-  background-image: url("../img/plates.png"),linear-gradient(180deg,#f8f9fc 92%,#fff 92%);
+  background-image: url("../img/plates.png"), linear-gradient(180deg, #f8f9fc 92%, #ffffff 92%);
   background-repeat: no-repeat;
-  background-position: 100.4% 117.8%,center;
-  background-size: 295px 494px,auto;
+  background-position: 100.4% 117.8%, center;
+  background-size: 295px 494px, auto;
   padding-top: 114px;
   padding-bottom: 195px;
   position: relative;
 
-  @media (min-resolution: 2dppx) and (min-width: 1200px){
-    background-image: url("../img/plates@2x.png"), linear-gradient(180deg,#f8f9fc 92%,#fff 92%);
+  @media (min-resolution: 2dppx) and (min-width: 1200px) {
+    background-image: url("../img/plates@2x.png"), linear-gradient(180deg, #f8f9fc 92%, #ffffff 92%);
   }
 
   @include vp-1199 {
     padding-bottom: 155px;
-    background-image: url("../img/plates-tablet.png"),linear-gradient(180deg,#f8f9fc 97%,#fff 97%);
+    background-image: url("../img/plates-tablet.png"), linear-gradient(180deg, #f8f9fc 97%, #ffffff 97%);
     background-size: 350px 445px, auto;
     background-position: right 1480px, center;
 
-    @media (min-resolution: 2dppx) and (max-width: 1199px){
-      background-image: url("../img/plates-tablet@2x.png"),linear-gradient(180deg,#f8f9fc 97%,#fff 97%);
+    @media (min-resolution: 2dppx) and (max-width: 1199px) {
+      background-image: url("../img/plates-tablet@2x.png"), linear-gradient(180deg, #f8f9fc 97%, #ffffff 97%);
     }
   }
 

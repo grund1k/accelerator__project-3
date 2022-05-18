@@ -30,14 +30,14 @@
   &:hover,
   &:focus {
     border: 7px solid;
-    border-image-source: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
+    border-image-source: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
     border-image-slice: 1;
     padding: 56px 70px;
   }
 
   &:hover .subscription-list__btn,
   &:focus .subscription-list__btn {
-    background: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+    background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
     border: none;
     color: $color-default-white;
   }
@@ -154,7 +154,7 @@
   margin: 0 auto;
 
   &:focus {
-    background: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+    background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
     border: none;
     color: $color-default-white;
   }
