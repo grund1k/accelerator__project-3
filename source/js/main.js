@@ -1,6 +1,8 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initTabs} from './modules/tabs/init-tabs';
+import {setSmoothsScroll} from './modules/smooth-scroll';
+import {addValidationListeners} from './modules/form';
 import './modules/clear-no-js';
 import './modules/video';
 
@@ -14,6 +16,9 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
 
   // Modules
+  const smoothLinks = document.querySelectorAll('a[href^="#"]');
+  setSmoothsScroll(smoothLinks);
+  addValidationListeners();
   // ---------------------------------
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
