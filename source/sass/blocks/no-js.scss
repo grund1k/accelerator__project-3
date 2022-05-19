@@ -51,3 +51,19 @@
 .no-js.trainers__button {
   display: none;
 }
+
+.no-js.reviews__wrapper,
+.no-js.reviews__list {
+  max-width: 1160px;
+}
+
+.no-js.reviews__swiper-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  overflow: unset;
+}
+
+.no-js.reviews__btn {
+  display: none;
+}

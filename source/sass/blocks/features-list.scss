@@ -26,6 +26,7 @@
   display: flex;
   gap: 30px;
   margin-top: -4px;
+  position: relative;
 
   &--first {
     margin-left: 27px;
@@ -33,6 +34,32 @@
 
   &--second {
     margin-left: 3px;
+  }
+
+  &--first,
+  &--second {
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      background-color: rgba(209, 10, 66, 0.2);
+    }
+  }
+
+  &--first {
+    &::after {
+      left: -28px;
+      bottom: -78px;
+      width: 109%;
+    }
+  }
+
+  &--second {
+    &::after {
+      left: 0;
+      bottom: -77px;
+      width: 101%;
+    }
   }
 
   &--fourth {
@@ -62,12 +89,20 @@
       margin-left: 45px;
     }
 
+    &--first,
+    &--second {
+      &::after {
+        display: none;
+      }
+    }
+
     &--center {
       min-width: 442px;
       min-height: 240px;
       grid-column: 1/-1;
       grid-row: 2/3;
       justify-self: center;
+      gap: 15px;
       padding-top: 12px;
     }
 
@@ -202,6 +237,10 @@
   line-height: 140%;
   color: $color-sapphire;
   margin: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 
   @include vp-767 {
     max-width: 228px;

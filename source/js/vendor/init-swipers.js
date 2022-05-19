@@ -36,7 +36,7 @@ const initCarousel = () => {
     slidesPerView: 1,
     spaceBetween: 40,
     slidesPerGroup: 1,
-    loop: true,
+    loop: false,
     navigation: {
       nextEl: '.reviews__btn--next',
       prevEl: '.reviews__btn--prev',

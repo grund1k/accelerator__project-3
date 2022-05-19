@@ -137,6 +137,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   align-self: center;
+  cursor: pointer;
 
   &--next {
     background-image: url("../img/svg/slider-right.svg");
@@ -145,6 +146,16 @@
   &--prev {
     background-image: url("../img/svg/slider-left.svg");
     order: -1;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.5;
+    cursor: default;
   }
 
   @include vp-767 {

@@ -6,12 +6,14 @@
   text-align: right;
 
   &--footer {
+    max-width: 150px;
     list-style: none;
-    margin: -9px 0 0 0;
     padding: 0;
     text-align: start;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
   }
 
   @include vp-767 {
@@ -73,5 +75,10 @@
 
   &:active {
     color: rgba($color-default-white, 0.8);
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
   }
 }

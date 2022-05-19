@@ -26,6 +26,7 @@
   background-color: $color-default-white;
   padding: 63px 77px;
   text-align: center;
+  overflow: auto;
 
   &:hover,
   &:focus {

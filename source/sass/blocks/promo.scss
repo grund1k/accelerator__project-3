@@ -112,6 +112,26 @@
   }
 }
 
+.promo__date,
+.promo__time {
+  position: relative;
+  width: fit-content;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    border-top: 1px solid $color-default-white;
+    top: 6px;
+  }
+
+  @include vp-1199 {
+    &::before {
+      top: 0;
+    }
+  }
+}
+
 .promo__date p,
 .promo__time p {
   font-weight: 700;
@@ -169,11 +189,13 @@
   max-width: 660px;
   width: 100%;
   min-height: 500px;
+  height: 100%;
   object-fit: cover;
 
   @include vp-1199 {
     min-width: 386px;
     min-height: unset;
+    height: auto;
     max-height: 292px;
   }
 

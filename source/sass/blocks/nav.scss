@@ -13,20 +13,24 @@
   line-height: 16px;
   color: $color-default-white;
   margin: 0 auto 0 0;
-  padding: 0;
+  padding: 0 50px 0 0;
   list-style: none;
   display: flex;
+  row-gap: 10px;
   flex-wrap: wrap;
+  user-select: none;
+
+  @include vp-1199 {
+    padding: 0 25px 0 0;
+  }
 
   @include vp-767 {
     font-size: 16px;
     line-height: 19px;
-  }
-
-  @include vp-767 {
     display: block;
     column-count: 2;
     margin: 0 auto 28px 0;
+    padding: 0;
   }
 }
 

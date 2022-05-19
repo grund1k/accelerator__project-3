@@ -67,6 +67,7 @@
   border-bottom: 1px solid #74819c;
   background-color: transparent;
   padding: 5px 3px 5px 0;
+  color: #74819c;
 
   &::placeholder {
     color: $color-default-white;
@@ -74,12 +75,7 @@
 
   &:hover,
   &:focus {
-    background-color: $color-default-white;
-    color: $color-sapphire;
-
-    &::placeholder {
-      color: $color-default-black;
-    }
+    border-bottom: 1px solid $color-default-white;
   }
 
   @include vp-1199 {

@@ -44,16 +44,37 @@
   list-style: none;
   padding: 0 0 0 4px;
   margin: 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    height: 102px;
+    width: 1px;
+    background-color: #74819C;
+    position: absolute;
+    top: 4px;
+    left: 58%;
+  }
 
   @include vp-1199 {
     padding: 0;
     column-gap: 25%;
     max-width: 503px;
+
+    &::after {
+      height: 129px;
+      top: 7px;
+      left: 53%;
+    }
   }
 
   @include vp-767 {
     column-count: 1;
     column-gap: 0;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -93,5 +114,14 @@
 
   @include vp-767 {
     min-width: unset;
+  }
+}
+
+.contacts__list-item a {
+  color: $color-sapphire;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
   }
 }
