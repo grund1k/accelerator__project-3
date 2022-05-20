@@ -1067,11 +1067,6 @@ button,
   color: #ffffff;
 }
 
-.social-list__item a:hover,
-.social-list__item a:focus {
-  text-decoration: underline;
-}
-
 .social-list__item a:active {
   color: rgba(255, 255, 255, 0.8);
 }
@@ -1079,6 +1074,7 @@ button,
 .social-list__item a:hover,
 .social-list__item a:focus {
   opacity: 0.8;
+  text-decoration: underline;
 }
 
 .description {
@@ -1481,9 +1477,9 @@ button,
   width: fit-content;
 }
 
-.promo__date:before,
-.promo__time:before {
-  content: '';
+.promo__date::before,
+.promo__time::before {
+  content: "";
   position: absolute;
   width: 100%;
   border-top: 1px solid #ffffff;
@@ -1710,14 +1706,6 @@ button,
   position: relative;
 }
 
-.features-list__item--first {
-  margin-left: 27px;
-}
-
-.features-list__item--second {
-  margin-left: 3px;
-}
-
 .features-list__item--first::after,
 .features-list__item--second::after {
   content: "";
@@ -1726,10 +1714,18 @@ button,
   background-color: rgba(209, 10, 66, 0.2);
 }
 
+.features-list__item--first {
+  margin-left: 27px;
+}
+
 .features-list__item--first::after {
   left: -28px;
   bottom: -78px;
   width: 109%;
+}
+
+.features-list__item--second {
+  margin-left: 3px;
 }
 
 .features-list__item--second::after {
@@ -2249,7 +2245,7 @@ button,
   content: "";
   height: 102px;
   width: 1px;
-  background-color: #74819C;
+  background-color: #74819c;
   position: absolute;
   top: 4px;
   left: 58%;
