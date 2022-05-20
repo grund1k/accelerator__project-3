@@ -28,14 +28,6 @@
   margin-top: -4px;
   position: relative;
 
-  &--first {
-    margin-left: 27px;
-  }
-
-  &--second {
-    margin-left: 3px;
-  }
-
   &--first,
   &--second {
     &::after {
@@ -47,6 +39,8 @@
   }
 
   &--first {
+    margin-left: 27px;
+
     &::after {
       left: -28px;
       bottom: -78px;
@@ -55,6 +49,8 @@
   }
 
   &--second {
+    margin-left: 3px;
+
     &::after {
       left: 0;
       bottom: -77px;

@@ -68,11 +68,6 @@
 .social-list__item a {
   color: $color-default-white;
 
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
-
   &:active {
     color: rgba($color-default-white, 0.8);
   }
@@ -80,5 +75,6 @@
   &:hover,
   &:focus {
     opacity: 0.8;
+    text-decoration: underline;
   }
 }
