@@ -33,14 +33,16 @@
   @include vp-767 {
     min-width: unset;
     padding-left: 14px;
+    padding-right: 15px;
     padding-top: 66px;
   }
 }
 
 .contacts__list {
   max-width: 404px;
-  column-count: 2;
-  column-gap: 45%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30%;
   list-style: none;
   padding: 0 0 0 4px;
   margin: 0;
@@ -58,7 +60,7 @@
 
   @include vp-1199 {
     padding: 0;
-    column-gap: 25%;
+    column-gap: 19%;
     max-width: 503px;
 
     &::after {
@@ -69,8 +71,7 @@
   }
 
   @include vp-767 {
-    column-count: 1;
-    column-gap: 0;
+    grid-template-columns: 1fr;
 
     &::after {
       display: none;
@@ -80,9 +81,35 @@
 
 .contacts__list-item {
   margin-bottom: 19px;
+  word-break: break-all;
+
+  &--order-0 {
+    order: 0;
+  }
+
+  &--order-1 {
+    order: 1;
+  }
+
+  &--order-2 {
+    order: 2;
+  }
+
+  &--order-3 {
+    order: 3;
+  }
 
   @include vp-1199 {
     margin-bottom: 23px;
+  }
+
+  @include vp-767 {
+    &--order-0,
+    &--order-1,
+    &--order-2,
+    &--order-3 {
+      order: unset;
+    }
   }
 }
 
@@ -118,10 +145,18 @@
 }
 
 .contacts__list-item a {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
   color: $color-sapphire;
 
   &:hover,
   &:focus {
     text-decoration: underline;
+  }
+
+  @include vp-1199 {
+    font-size: 18px;
   }
 }

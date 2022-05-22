@@ -51,11 +51,13 @@
 
   @include vp-1199 {
     min-width: 280px;
+    width: 100%;
   }
 
   @include vp-767 {
     width: 100%;
-    max-height: 299px;
+    height: 100%;
+    min-height: 299px;
     text-align: center;
     padding: 35px 36px 43px 35px;
   }
@@ -66,14 +68,17 @@
   overflow: hidden;
   max-width: 280px;
   max-height: 462px;
+  flex-shrink: 0;
 
   @include vp-1199 {
+    max-width: 398px;
     width: 100%;
-    max-width: unset;
   }
 
   @include vp-767 {
-    max-height: 329px;
+    max-width: unset;
+    max-height: 299px;
+    height: 100%;
   }
 }
 
@@ -87,9 +92,9 @@
   left: -38px;
 
   @include vp-1199 {
-    width: 121%;
-    top: -44%;
-    left: -9px;
+    width: 122%;
+    top: -45%;
+    left: -12px;
   }
 
   @include vp-767 {
@@ -98,6 +103,7 @@
 
   @media (max-width: 530px) {
     top: -52%;
+    left: -9px;
   }
 }
 
@@ -127,6 +133,7 @@
   color: $color-resolution-blue;
   margin-top: auto;
   padding-bottom: 3px;
+  padding-top: 15px;
   border-bottom: 1px solid;
 
   &:hover,

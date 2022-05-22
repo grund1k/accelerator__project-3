@@ -5,7 +5,7 @@ const initSlider = () => {
     slidesPerView: 4,
     spaceBetween: 41,
     slidesPerGroup: 4,
-    loop: false,
+    loop: true,
     loopFillGroupWithBlank: false,
     navigation: {
       nextEl: '.swiper-button-next',
@@ -17,7 +17,7 @@ const initSlider = () => {
         spaceBetween: 30,
         slidesPerGroup: 1,
       },
-      767: {
+      768: {
         slidesPerView: 2,
         spaceBetween: 31,
         slidesPerGroup: 2,

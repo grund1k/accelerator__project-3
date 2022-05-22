@@ -1040,6 +1040,7 @@ button,
 
 .social-list--footer {
   max-width: 150px;
+  min-width: 111px;
   list-style: none;
   padding: 0;
   text-align: start;
@@ -1155,7 +1156,7 @@ button,
 .description__video-container {
   position: absolute;
   left: -9.5%;
-  top: 72%;
+  top: 289px;
 }
 
 .description__video-container--active .description__video {
@@ -1170,6 +1171,10 @@ button,
   display: none;
   width: 364px;
   height: 228px;
+}
+
+.description__video iframe {
+  border: none;
 }
 
 .description__video-overlay {
@@ -1920,6 +1925,8 @@ button,
   overflow: hidden;
   max-width: 280px;
   max-height: 462px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .promo-article__image-wrapper img {
@@ -1961,6 +1968,7 @@ button,
   color: #1c3374;
   margin-top: auto;
   padding-bottom: 3px;
+  padding-top: 15px;
   border-bottom: 1px solid;
 }
 
@@ -2229,12 +2237,13 @@ button,
 
 .contacts__list {
   max-width: 404px;
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-  column-count: 2;
-  -webkit-column-gap: 45%;
-  -moz-column-gap: 45%;
-  column-gap: 45%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 30%;
+  -moz-column-gap: 30%;
+  column-gap: 30%;
   list-style: none;
   padding: 0 0 0 4px;
   margin: 0;
@@ -2253,6 +2262,31 @@ button,
 
 .contacts__list-item {
   margin-bottom: 19px;
+  word-break: break-all;
+}
+
+.contacts__list-item--order-0 {
+  -webkit-box-ordinal-group: 1;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
+.contacts__list-item--order-1 {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.contacts__list-item--order-2 {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.contacts__list-item--order-3 {
+  -webkit-box-ordinal-group: 4;
+  -ms-flex-order: 3;
+  order: 3;
 }
 
 .contacts__list-item h3 {
@@ -2273,6 +2307,10 @@ button,
 }
 
 .contacts__list-item a {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
   color: #102654;
 }
 
@@ -2528,7 +2566,7 @@ button,
 
   .header__text-wrapper ul {
     top: 134px;
-    right: 65%;
+    right: 213px;
   }
 
   .header__btn {
@@ -2543,6 +2581,12 @@ button,
   .logo svg {
     width: 80px;
     height: 18px;
+  }
+
+  .social-list--footer {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
   }
 
   .social-list__item--footer:not(:last-child) {
@@ -2740,17 +2784,16 @@ button,
   }
 
   .trainers__button--next {
-    right: 5.7%;
+    right: 10px;
     top: 57%;
   }
 
   .trainers__button--prev {
-    left: 5.7%;
+    left: 10px;
     top: 57%;
   }
 
   .trainers-list {
-    max-width: 564px;
     margin: 0 auto;
   }
 
@@ -2763,7 +2806,8 @@ button,
   }
 
   .trainer-card__title-wrapper {
-    bottom: 28px;
+    bottom: 31px;
+    left: 4px;
   }
 
   .trainer-card__info {
@@ -2886,17 +2930,18 @@ button,
 
   .promo-article__sales-text-wrapper {
     min-width: 280px;
+    width: 100%;
   }
 
   .promo-article__image-wrapper {
+    max-width: 398px;
     width: 100%;
-    max-width: unset;
   }
 
   .promo-article__image-wrapper img {
-    width: 121%;
-    top: -44%;
-    left: -9px;
+    width: 122%;
+    top: -45%;
+    left: -12px;
   }
 
   .reviews {
@@ -2981,9 +3026,9 @@ button,
 
   .contacts__list {
     padding: 0;
-    -webkit-column-gap: 25%;
-    -moz-column-gap: 25%;
-    column-gap: 25%;
+    -webkit-column-gap: 19%;
+    -moz-column-gap: 19%;
+    column-gap: 19%;
     max-width: 503px;
   }
 
@@ -3005,6 +3050,10 @@ button,
   .contacts__list-item p {
     font-size: 18px;
     min-width: 218px;
+  }
+
+  .contacts__list-item a {
+    font-size: 18px;
   }
 
   .footer {
@@ -3054,6 +3103,20 @@ button,
 @media (max-width: 768px) {
   .promo__text-wrapper h2 {
     margin: 0 30px 0 0;
+  }
+
+  .trainers__button--next {
+    right: 43px;
+    top: 57%;
+  }
+
+  .trainers__button--prev {
+    left: 43px;
+    top: 57%;
+  }
+
+  .trainers-list {
+    max-width: 566px;
   }
 }
 
@@ -3171,14 +3234,27 @@ button,
     left: 0;
   }
 
-  .description__video {
+  .description__video-container--active {
+    display: block;
     width: 100%;
-    height: 167px;
+    padding-top: 50%;
+  }
+
+  .description__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
   }
 
   .description__video-overlay {
     width: 100%;
-    height: 167px;
+    height: auto;
   }
 
   .description__video-overlay img {
@@ -3188,7 +3264,11 @@ button,
   }
 
   .description__video-play-button {
-    left: 39%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
   }
 
   .subscription {
@@ -3299,23 +3379,23 @@ button,
     line-height: 32px;
   }
 
+  .trainers__wrapper {
+    padding: 0 47px;
+  }
+
   .trainers__button {
     width: 10px;
     height: 19px;
   }
 
   .trainers__button--next {
-    right: 4.7%;
+    right: 15px;
     top: 59%;
   }
 
   .trainers__button--prev {
-    left: 4.7%;
+    left: 15px;
     top: 59%;
-  }
-
-  .trainers-list {
-    max-width: 226px;
   }
 
   .trainer-card {
@@ -3452,13 +3532,16 @@ button,
 
   .promo-article__sales-text-wrapper {
     width: 100%;
-    max-height: 299px;
+    height: 100%;
+    min-height: 299px;
     text-align: center;
     padding: 35px 36px 43px 35px;
   }
 
   .promo-article__image-wrapper {
-    max-height: 329px;
+    max-width: unset;
+    max-height: 299px;
+    height: 100%;
   }
 
   .promo-article__image-wrapper img {
@@ -3562,20 +3645,26 @@ button,
   .contacts__wrapper {
     min-width: unset;
     padding-left: 14px;
+    padding-right: 15px;
     padding-top: 66px;
   }
 
   .contacts__list {
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
-    column-count: 1;
-    -webkit-column-gap: 0;
-    -moz-column-gap: 0;
-    column-gap: 0;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .contacts__list::after {
     display: none;
+  }
+
+  .contacts__list-item--order-0,
+  .contacts__list-item--order-1,
+  .contacts__list-item--order-2,
+  .contacts__list-item--order-3 {
+    -webkit-box-ordinal-group: unset;
+    -ms-flex-order: unset;
+    order: unset;
   }
 
   .contacts__list-item p {
@@ -3624,6 +3713,7 @@ button,
 @media (max-width: 530px) {
   .promo-article__image-wrapper img {
     top: -52%;
+    left: -9px;
   }
 }
 
@@ -3652,8 +3742,16 @@ button,
 }
 
 @media (max-width: 320px) {
+  .description__video-overlay {
+    max-height: 167px;
+  }
+
   .promo__text-wrapper h2 {
     margin: 0 30px 0 0;
+  }
+
+  .trainers-list {
+    max-width: 226px;
   }
 }
 

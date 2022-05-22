@@ -37,6 +37,9 @@
 
 .trainers__wrapper {
   position: relative;
+  @include vp-767 {
+    padding: 0 47px;
+  }
 }
 
 .trainers__button {
@@ -83,12 +86,24 @@
 
   @include vp-1199 {
     &--next {
-      right: 5.7%;
+      right: 10px;
       top: 57%;
     }
 
     &--prev {
-      left: 5.7%;
+      left: 10px;
+      top: 57%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &--next {
+      right: 43px;
+      top: 57%;
+    }
+
+    &--prev {
+      left: 43px;
       top: 57%;
     }
   }
@@ -98,12 +113,12 @@
     height: 19px;
 
     &--next {
-      right: 4.7%;
+      right: 15px;
       top: 59%;
     }
 
     &--prev {
-      left: 4.7%;
+      left: 15px;
       top: 59%;
     }
   }
