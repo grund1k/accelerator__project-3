@@ -2799,19 +2799,27 @@ button,
 
   .trainer-card {
     max-width: 268px;
+    max-width: unset;
+    height: auto;
+    max-height: unset;
   }
 
   .trainer-card__wrapper img {
-    max-width: 268px;
+    height: auto;
+    min-height: unset;
+    max-width: unset;
+    width: 100%;
   }
 
   .trainer-card__title-wrapper {
-    bottom: 31px;
+    bottom: 23px;
     left: 4px;
   }
 
   .trainer-card__info {
-    max-width: 268px;
+    max-width: unset;
+    height: 100%;
+    max-height: unset;
   }
 
   .features {
@@ -3116,7 +3124,12 @@ button,
   }
 
   .trainers-list {
-    max-width: 566px;
+    max-width: 100%;
+  }
+
+  .trainer-card__wrapper img {
+    max-width: 268px;
+    max-height: 294px;
   }
 }
 
@@ -3399,13 +3412,17 @@ button,
   }
 
   .trainer-card {
-    max-width: 226px;
-    max-height: 274px;
+    max-width: unset;
+    height: auto;
+    max-height: unset;
   }
 
   .trainer-card__wrapper img {
-    max-width: 226px;
-    min-height: 274px;
+    height: auto;
+    min-height: unset;
+    max-height: unset;
+    max-width: unset;
+    width: 100%;
   }
 
   .trainer-card__info {
@@ -3738,6 +3755,13 @@ button,
     min-height: 321px;
     left: -132px;
     bottom: 5px;
+  }
+}
+
+@media (max-width: 321px) {
+  .trainer-card__wrapper img {
+    max-width: 226px;
+    min-height: 274px;
   }
 }
 
